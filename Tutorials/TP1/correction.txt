@@ -8,120 +8,21 @@ test1 (__main__.Exo3Tests.test1) ... ok
 test2 (__main__.Exo3Tests.test2) ... ok
 test3 (__main__.Exo3Tests.test3) ... ok
 test4 (__main__.Exo3Tests.test4) ... ok
-testPosition1 (__main__.Exo4Tests.testPosition1) ... FAIL
-testPosition2 (__main__.Exo4Tests.testPosition2) ... FAIL
-testPosition3 (__main__.Exo4Tests.testPosition3) ... FAIL
-testPointDeRencontre1 (__main__.Exo5Tests.testPointDeRencontre1) ... FAIL
-testPointDeRencontre2 (__main__.Exo5Tests.testPointDeRencontre2) ... FAIL
+testPosition1 (__main__.Exo4Tests.testPosition1) ... ok
+testPosition2 (__main__.Exo4Tests.testPosition2) ... ok
+testPosition3 (__main__.Exo4Tests.testPosition3) ... ok
+testPointDeRencontre1 (__main__.Exo5Tests.testPointDeRencontre1) ... ok
+testPointDeRencontre2 (__main__.Exo5Tests.testPointDeRencontre2) ... ok
 testPointDeRencontre3 (__main__.Exo5Tests.testPointDeRencontre3) ... ok
-testEffectuerRotation1 (__main__.Exo6Tests.testEffectuerRotation1) ... FAIL
-testEffectuerRotation2 (__main__.Exo6Tests.testEffectuerRotation2) ... FAIL
+testEffectuerRotation1 (__main__.Exo6Tests.testEffectuerRotation1) ... ok
+testEffectuerRotation2 (__main__.Exo6Tests.testEffectuerRotation2) ... ok
 testEffectuerRotation3 (__main__.Exo6Tests.testEffectuerRotation3) ... ok
-testEffectuerRotation4 (__main__.Exo6Tests.testEffectuerRotation4) ... FAIL
-testEffectuerRotation5 (__main__.Exo6Tests.testEffectuerRotation5) ... FAIL
-testModule1 (__main__.Exo6Tests.testModule1) ... FAIL
-testModule2 (__main__.Exo6Tests.testModule2) ... FAIL
-
-======================================================================
-FAIL: testPosition1 (__main__.Exo4Tests.testPosition1)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 93, in testPosition1
-    self.assertAlmostEqual(calculerPosition(0, 18, 22,98), 354.444, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 354.444 within 0.002 delta (354.444 difference)
-
-======================================================================
-FAIL: testPosition2 (__main__.Exo4Tests.testPosition2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 98, in testPosition2
-    self.assertAlmostEqual(calculerPosition(0, 200, 1020,88), 40800, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 40800 within 0.002 delta (40800 difference)
-
-======================================================================
-FAIL: testPosition3 (__main__.Exo4Tests.testPosition3)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 103, in testPosition3
-    self.assertAlmostEqual(calculerPosition(300, 10,22 ,55), 498.61, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 498.61 within 0.002 delta (498.61 difference)
-
-======================================================================
-FAIL: testPointDeRencontre1 (__main__.Exo5Tests.testPointDeRencontre1)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 111, in testPointDeRencontre1
-    self.assertAlmostEqual(pointDeRencontre(40,60,81),32.400000000000006, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 32.400000000000006 within 0.002 delta (32.400000000000006 difference)
-
-======================================================================
-FAIL: testPointDeRencontre2 (__main__.Exo5Tests.testPointDeRencontre2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 117, in testPointDeRencontre2
-    self.assertAlmostEqual(pointDeRencontre(120,60,5),3.3333, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 3.3333 within 0.002 delta (3.3333 difference)
-
-======================================================================
-FAIL: testEffectuerRotation1 (__main__.Exo6Tests.testEffectuerRotation1)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 142, in testEffectuerRotation1
-    self.assertAlmostEqual(effectuerRotation(complex(2,2), 0, trouverModule),complex(2,2), None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != (2+2j) within 0.002 delta (2.8284271247461903 difference)
-
-======================================================================
-FAIL: testEffectuerRotation2 (__main__.Exo6Tests.testEffectuerRotation2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 149, in testEffectuerRotation2
-    self.assertAlmostEqual(resultat.real,1.23990, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 1.2399 within 0.002 delta (1.2399 difference)
-
-======================================================================
-FAIL: testEffectuerRotation4 (__main__.Exo6Tests.testEffectuerRotation4)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 163, in testEffectuerRotation4
-    self.assertAlmostEqual(resultat.real,6, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 6 within 0.002 delta (6 difference)
-
-======================================================================
-FAIL: testEffectuerRotation5 (__main__.Exo6Tests.testEffectuerRotation5)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 170, in testEffectuerRotation5
-    self.assertAlmostEqual(resultat.real,19, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 19 within 0.002 delta (19 difference)
-
-======================================================================
-FAIL: testModule1 (__main__.Exo6Tests.testModule1)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 130, in testModule1
-    self.assertAlmostEqual(trouverModule(complex(1,7)),7.071, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 7.071 within 0.002 delta (7.071 difference)
-
-======================================================================
-FAIL: testModule2 (__main__.Exo6Tests.testModule2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\Tp1_version1\TP1_version1\test_TP1.py", line 136, in testModule2
-    self.assertAlmostEqual(trouverModule(complex(-11,7)),13.0384, None, None, 0.002)
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 0 != 13.0384 within 0.002 delta (13.0384 difference)
+testEffectuerRotation4 (__main__.Exo6Tests.testEffectuerRotation4) ... ok
+testEffectuerRotation5 (__main__.Exo6Tests.testEffectuerRotation5) ... ok
+testModule1 (__main__.Exo6Tests.testModule1) ... ok
+testModule2 (__main__.Exo6Tests.testModule2) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 0.007s
+Ran 23 tests in 0.013s
 
-FAILED (failures=11)
+OK
