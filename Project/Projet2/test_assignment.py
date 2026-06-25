@@ -132,7 +132,7 @@ class TestReservoir(unittest.TestCase):
         temperature_g = res.getTemperature(reservoir, "Gauche")
         self.assertEqual(result_g, temperature_g)
         result_d = 398.2
-        temperature_d = res.getTemperature(reservoir, "Droite")
+        temperature_d = res.getTemperature(reservoir, "Droit")
         self.assertEqual(result_d, temperature_d)
 
     def test26_deplacerMolecules(self):

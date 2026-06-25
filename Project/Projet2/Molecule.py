@@ -77,8 +77,10 @@ def creerListMolecules(hauteur,xmin,xmax,nbMolecules):
         # NB: La position d'une molécule est mésurée à partir de son centre.
         x = randint(xmin + rayon, xmax - rayon)
         y = randint(rayon, hauteur - rayon)
-        dx = randint(round(xmin/2), round(xmax/2))
-        dy = randint(0, round(hauteur/2))
+        # Les valeurs -30 et 30 ont été obtenues à partir d'une recherche sur
+        # internet.
+        dx = randint(-30, 30)
+        dy = randint(-30, 30)
 
         # Créer la molécule à partir des données aléatoires et ajouter là
         # à la liste des molécules.
@@ -117,7 +119,7 @@ def inverseDirMolecule(mol, paroiG, paroiD, hauteur):
         mol["dy"] *= -1
 
     # Si la molécule touche la paroi droite du réservoir en y
-    if ((mol["y"] - mol["rayon"]) >= hauteur):
+    if ((mol["y"] + mol["rayon"]) >= hauteur):
         # Repositionner la molécule et changer sa direction dy
         mol["y"] = hauteur - mol["rayon"]
         mol["dy"] *= -1
