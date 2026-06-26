@@ -1,0 +1,28 @@
+test1_combine_dic1 (__main__.TestExercice1.test1_combine_dic1) ... ok
+test1_combine_dic2 (__main__.TestExercice1.test1_combine_dic2) ... ok
+test2_tri_bulle1 (__main__.TestExercice2.test2_tri_bulle1) ... ok
+test2_tri_bulle2 (__main__.TestExercice2.test2_tri_bulle2) ... ok
+test2_tri_bulle3 (__main__.TestExercice2.test2_tri_bulle3) ... ok
+test3_compute_pi1 (__main__.TestExercice3.test3_compute_pi1) ... ok
+test3_compute_pi2 (__main__.TestExercice3.test3_compute_pi2) ... ok
+test41_init_maze1 (__main__.TestExercice4.test41_init_maze1) ... ok
+test41_init_maze2 (__main__.TestExercice4.test41_init_maze2) ... ok
+test42_validate_move1 (__main__.TestExercice4.test42_validate_move1) ... ok
+test42_validate_move2 (__main__.TestExercice4.test42_validate_move2) ... ok
+test42_validate_move3 (__main__.TestExercice4.test42_validate_move3) ... ok
+test42_validate_move4 (__main__.TestExercice4.test42_validate_move4) ... ok
+test42_validate_move5 (__main__.TestExercice4.test42_validate_move5) ... ok
+test42_validate_move6 (__main__.TestExercice4.test42_validate_move6) ... ok
+test43_move1 (__main__.TestExercice4.test43_move1) ... ok
+test43_move2 (__main__.TestExercice4.test43_move2) ... ok
+test43_move3 (__main__.TestExercice4.test43_move3) ... ok
+test43_move4 (__main__.TestExercice4.test43_move4) ... ok
+test43_move5 (__main__.TestExercice4.test43_move5) ... ok
+test43_move6 (__main__.TestExercice4.test43_move6) ... ok
+test43_move7 (__main__.TestExercice4.test43_move7) ... ok
+test43_move8 (__main__.TestExercice4.test43_move8) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.087s
+
+OK
