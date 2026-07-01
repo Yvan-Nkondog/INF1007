@@ -93,8 +93,33 @@ def noeudMinimalNonVisites(matrice,noeuds_vis):
     vecteur_positif(noeuds_vis)
     #To do: Cherche le poids minimum entre un des nœuds visités et un de ses nœuds voisins
     #To do: utiliser la fonction noeudMinimalNonVisitesDeNoeud(matrice, noeud, noeuds_vis)
-    
+    if not matrice_valide(matrice):
+        raise TypeError("La matrice n'est pas carrée.") 
+   
+    for i in range(len(matrice)):
+        if not vecteur_valide(matrice[i]):
+            raise TypeError("Les entrées du vecteur ne sont pas du type désiré ou au moins " \
+            "l'une des valeurs est inférieure à -1.")
+        
+    if not vecteur_positif(noeuds_vis):
+        raise ValueError("Les entrées du vecteur ne sont pas du type désiré ou au moins " \
+            "l'une des valeurs est inférieure à 0.")
 
+    # Initialiser la variable "resultat" avec des paramètres correspondant à la première ligne.
+    noeud_depart = noeuds_vis[0]
+    noeud_arrive, poids = noeudMinimalNonVisitesDeNoeud(matrice, noeud_depart, noeuds_vis)
+    resultat = noeud_depart, noeud_arrive, poids
+
+    # Itérer afin de mettre à jour la variable résultat, selon le poids minimum.
+    for noeud in noeuds_vis:
+        indice_noeud, poids = noeudMinimalNonVisitesDeNoeud(matrice, noeud, noeuds_vis)
+        if poids < resultat[2]:
+            resultat = noeud, indice_noeud, poids
+
+    # Extraire le noued de départ et le noeud d'arrivée ayant le poids minimum de la variable
+    # résultat et retourner ces valeurs.
+    return resultat[0:2]
+    
 
 def noeudsVoisins(matrice, noeud):
     matrice_valide(matrice)

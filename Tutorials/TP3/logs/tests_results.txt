@@ -4,7 +4,7 @@ testNoeudMinimalNonVisitesDeNoeudA (__main__.TestAlgo.testNoeudMinimalNonVisites
 testNoeudMinimalNonVisitesDeNoeudB (__main__.TestAlgo.testNoeudMinimalNonVisitesDeNoeudB) ... ok
 testNoeudsVoisinsA (__main__.TestAlgo.testNoeudsVoisinsA) ... FAIL
 testNoeudsVoisinsB (__main__.TestAlgo.testNoeudsVoisinsB) ... FAIL
-testnoeudMinimalNonVisites (__main__.TestAlgo.testnoeudMinimalNonVisites) ... FAIL
+testnoeudMinimalNonVisites (__main__.TestAlgo.testnoeudMinimalNonVisites) ... ok
 testAfficheChemin (__main__.TestInterface.testAfficheChemin) ... ok
 testGenereMatriceAleatoireA (__main__.TestInterface.testGenereMatriceAleatoireA) ... ok
 testGenereMatriceAleatoireB (__main__.TestInterface.testGenereMatriceAleatoireB) ... ok
@@ -44,16 +44,7 @@ Traceback (most recent call last):
     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 AssertionError: First sequence is not a tuple: None
 
-======================================================================
-FAIL: testnoeudMinimalNonVisites (__main__.TestAlgo.testnoeudMinimalNonVisites)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Sun Sun\Documents\Zcde\17\TP\TP3_Version1\TP3_Version1\test_assignment.py", line 67, in testnoeudMinimalNonVisites
-    self.assertTupleEqual(tuple_1, tuple_2)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-AssertionError: First sequence is not a tuple: None
+Ran 11 tests in 0.002s
 
-----------------------------------------------------------------------
-Ran 11 tests in 0.008s
-
-FAILED (failures=4)
+FAILED (failures=3)
