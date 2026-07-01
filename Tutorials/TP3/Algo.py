@@ -89,8 +89,6 @@ def noeudMinimalNonVisitesDeNoeud(matrice, noeud, noeuds_vis):
 
 def noeudMinimalNonVisites(matrice,noeuds_vis):
     #NOTE
-    matrice_valide(matrice)
-    vecteur_positif(noeuds_vis)
     #To do: Cherche le poids minimum entre un des nœuds visités et un de ses nœuds voisins
     #To do: utiliser la fonction noeudMinimalNonVisitesDeNoeud(matrice, noeud, noeuds_vis)
     if not matrice_valide(matrice):
