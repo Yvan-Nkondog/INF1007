@@ -2,7 +2,7 @@
 
 from pickle import FALSE, TRUE
 # FONCTIONS POUR LES NOTES
-def sacalaire_positif(a):
+def scalaire_positif(a):
     if type(a)==int and a >= 0:
         return TRUE
     else:
@@ -67,7 +67,7 @@ def noeudMinimalNonVisitesDeNoeud(matrice, noeud, noeuds_vis):
             raise TypeError("Les entrées du vecteur ne sont pas du type désiré ou au moins " \
             "l'une des valeurs est inférieure à -1.")
         
-    if not sacalaire_positif(noeud):
+    if not scalaire_positif(noeud):
         raise TypeError("La valeur noeud doit être un entier positif.") 
     
     if not vecteur_positif(noeuds_vis):
@@ -120,25 +120,77 @@ def noeudMinimalNonVisites(matrice,noeuds_vis):
     
 
 def noeudsVoisins(matrice, noeud):
-    matrice_valide(matrice)
-    sacalaire_positif(noeud)
-    noeuds_voisin = []
+    noeuds_voisins = []
     poids = []
     #To do: Cherche les nœuds voisins et leur poids par rapport à un nœud initial.
+    if not matrice_valide(matrice):
+        raise TypeError("La matrice n'est pas carrée.") 
     
+    if not scalaire_positif(noeud):
+        raise TypeError("La valeur noeud doit être un entier positif.") 
+    
+    ligne_visite = matrice[noeud][:]
+    for i in range(len(ligne_visite)):
+        if ligne_visite[i] != -1:
+            noeuds_voisins.append(i)
+            poids.append(ligne_visite[i])
+
+    return noeuds_voisins, poids
+
+
+# Fonction ajoutée dans le but d'alléger le code de la fonction dijkstra(...)
+def noeudSuivant(distance_min: list, noeuds_vis: list) -> int:
+    position_noeud = -1
+    # Initialiser une valeur minimale afin de comparer à chaque
+    # valeur contenue dans la liste distance_min
+    valeur_minimum = float("inf")
+
+    for i in range(len(distance_min)):
+        if (distance_min[i] != -1) and (i not in noeuds_vis):
+            if distance_min[i] < valeur_minimum:
+                valeur_minimum = distance_min[i]
+                position_noeud = i
+
+    return position_noeud
 
 
 def dijkstra(matrice, depart, arrive):
     #NOTE
-    matrice_valide(matrice)
-    sacalaire_positif(depart)
-    sacalaire_positif(arrive)
-    # To do: Calcule le plus court chemin entre un nœud de départ et un nœud d’arrivée.
+    if not matrice_valide(matrice):
+        raise TypeError("La matrice n'est pas carrée.") 
     
-        
-    #Trouver le noeud voisin de distance minimun par rapport au noeud courant
-        
-    return None, None
+    if (not scalaire_positif(depart)) or (not scalaire_positif(arrive)):
+        raise TypeError("La valeur de chaque noeud doit être un entier positif.")  
+    
+    # To do: Calcule le plus court chemin entre un nœud de départ et un nœud d’arrivée.
+    # Trouver le noeud voisin de distance minimun par rapport au noeud courant
+    noeuds_vis = []
+    distance_min = [-1] * len(matrice)
+    predecesseurs = [-1] * len(matrice)
+
+    distance_min[depart] = 0
+    noeud_courant = depart
+
+    while (len(noeuds_vis) != len(matrice) and (noeud_courant != arrive)):
+
+        noeuds_vis.append(noeud_courant)
+        noeud_voisins, poids = noeudsVoisins(matrice, noeud_courant)
+        for i in range(len(noeud_voisins)):
+            poids_arc = poids[i]
+            successeur = noeud_voisins[i]
+
+            if successeur not in noeuds_vis:
+                distance = distance_min[noeud_courant] + poids_arc
+
+                if (distance_min[successeur] == -1) or (distance < distance_min[successeur]):
+                    distance_min[successeur] = distance
+                    predecesseurs[successeur] = noeud_courant
+
+        noeud_courant = noeudSuivant(distance_min, noeuds_vis)
+        if noeud_courant == -1:
+            break
+
+    return distance_min[arrive], predecesseurs
 
 
 if __name__ == '__main__':
