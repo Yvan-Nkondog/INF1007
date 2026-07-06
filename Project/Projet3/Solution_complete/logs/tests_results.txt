@@ -5,97 +5,18 @@ test_creer_moteurs (__main__.TestAssemblage.test_creer_moteurs) ... FAIL
 test_creer_reservoirs (__main__.TestAssemblage.test_creer_reservoirs) ... FAIL
 test_charger_capsules_df (__main__.TestFichiersPieces.test_charger_capsules_df) ... ok
 test_charger_moteurs_df_1 (__main__.TestFichiersPieces.test_charger_moteurs_df_1) ... ok
-test_charger_moteurs_df_2 (__main__.TestFichiersPieces.test_charger_moteurs_df_2) ... o k
+test_charger_moteurs_df_2 (__main__.TestFichiersPieces.test_charger_moteurs_df_2) ... ok
 test_charger_reservoirs_df (__main__.TestFichiersPieces.test_charger_reservoirs_df) ... ok
 test_filtrer_moteurs (__main__.TestFichiersPieces.test_filtrer_moteurs) ... ok
 test_filtrer_moteurs_vide (__main__.TestFichiersPieces.test_filtrer_moteurs_vide) ... ok
-test_fusee_deltaV (__main__.TestFusee.test_fusee_deltaV) ... ERROR
-test_fusee_hauteur (__main__.TestFusee.test_fusee_hauteur) ... ERROR
-test_fusee_masse (__main__.TestFusee.test_fusee_masse) ... ERROR
-test_fusee_prix (__main__.TestFusee.test_fusee_prix) ... ERROR
-test_fusee_str (__main__.TestFusee.test_fusee_str) ... ERROR
-test_reservoir_masse_rempli (__main__.TestFusee.test_reservoir_masse_rempli) ... ERROR
+test_fusee_deltaV (__main__.TestFusee.test_fusee_deltaV) ... ok
+test_fusee_hauteur (__main__.TestFusee.test_fusee_hauteur) ... ok
+test_fusee_masse (__main__.TestFusee.test_fusee_masse) ... ok
+test_fusee_prix (__main__.TestFusee.test_fusee_prix) ... ok
+test_fusee_str (__main__.TestFusee.test_fusee_str) ... ok
+test_reservoir_masse_rempli (__main__.TestFusee.test_reservoir_masse_rempli) ... ok
 test_fusee_constructeur_existe (__main__.TestFuseeConstructeur.test_fusee_constructeur_existe) ... ok
 test_main (__main__.TestMain.test_main) ... ERROR
-
-======================================================================
-ERROR: test_fusee_deltaV (__main__.TestFusee.test_fusee_deltaV)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 155, in test_fusee_deltaV
-    self.assertAlmostEqual(self.fusee.calculer_deltav(), 69.71603173654347,
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                           msg="Le deltaV de la fusï¿½e n'est pas celui attendu.")
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python313\Lib\unittest\case.py", line 938, in assertAlmostEqual
-    diff = abs(first - second)
-               ~~~~~~^~~~~~~~
-TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
-
-======================================================================
-ERROR: test_fusee_hauteur (__main__.TestFusee.test_fusee_hauteur)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 147, in test_fusee_hauteur
-    self.assertAlmostEqual(self.fusee.hauteur, 5.4,
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-                           msg="La hauteur totale de la fusï¿½e n'est pas celle attendue.")
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python313\Lib\unittest\case.py", line 938, in assertAlmostEqual
-    diff = abs(first - second)
-               ~~~~~~^~~~~~~~
-TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
-
-======================================================================
-ERROR: test_fusee_masse (__main__.TestFusee.test_fusee_masse)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 143, in test_fusee_masse
-    self.assertAlmostEqual(self.fusee.masse, 2850.5,
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-                           msg="La masse totale de la fusï¿½e remplie de carburant n'est pas celle attendue.")
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python313\Lib\unittest\case.py", line 938, in assertAlmostEqual
-    diff = abs(first - second)
-               ~~~~~~^~~~~~~~
-TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
-
-======================================================================
-ERROR: test_fusee_prix (__main__.TestFusee.test_fusee_prix)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 151, in test_fusee_prix
-    self.assertAlmostEqual(self.fusee.prix, 15320,
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-                           msg="Le prix total de la fusï¿½e n'est pas celui attendu.")
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python313\Lib\unittest\case.py", line 938, in assertAlmostEqual
-    diff = abs(first - second)
-               ~~~~~~^~~~~~~~
-TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
-
-======================================================================
-ERROR: test_fusee_str (__main__.TestFusee.test_fusee_str)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 139, in test_fusee_str
-    print(self.fusee)
-    ~~~~~^^^^^^^^^^^^
-TypeError: __str__ returned non-string (type NoneType)
-
-======================================================================
-ERROR: test_reservoir_masse_rempli (__main__.TestFusee.test_reservoir_masse_rempli)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 123, in test_reservoir_masse_rempli
-    self.assertAlmostEqual(reservoir.masse_rempli, 100.5,
-    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                            msg="La masse d'un pichet de carburant devrait ï¿½tre 100.5 litres")
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python313\Lib\unittest\case.py", line 938, in assertAlmostEqual
-    diff = abs(first - second)
-               ~~~~~~^~~~~~~~
-TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
 
 ======================================================================
 ERROR: test_main (__main__.TestMain.test_main)
@@ -126,7 +47,7 @@ Traceback (most recent call last):
   File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 219, in test_corps_celestes_accessibles
     self.assertEqual(corps_accessibles, corps_attendus)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None != ['Vï¿½nus', 'Mars']
+AssertionError: None != ['Vénus', 'Mars']
 
 ======================================================================
 FAIL: test_creer_capsules (__main__.TestAssemblage.test_creer_capsules)
@@ -156,6 +77,6 @@ Traceback (most recent call last):
 AssertionError: None is not an instance of <class 'list'> : creer_reservoirs doit retourner une liste
 
 ----------------------------------------------------------------------
-Ran 19 tests in 0.111s
+Ran 19 tests in 0.086s
 
-FAILED (failures=5, errors=7)
+FAILED (failures=5, errors=1)
