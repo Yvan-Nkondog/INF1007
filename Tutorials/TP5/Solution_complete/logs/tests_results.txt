@@ -1,0 +1,107 @@
+test_attributs_accessoire (__main__.TestAccessoire.test_attributs_accessoire) ... ok
+test_constructeur (__main__.TestAccessoire.test_constructeur) ... ok
+test_score_viral_bijou (__main__.TestAccessoire.test_score_viral_bijou) ... FAIL
+test_score_viral_chapeau (__main__.TestAccessoire.test_score_viral_chapeau) ... ok
+test_score_viral_chaussures (__main__.TestAccessoire.test_score_viral_chaussures) ... FAIL
+test_score_viral_vetement (__main__.TestAccessoire.test_score_viral_vetement) ... FAIL
+test_str (__main__.TestAccessoire.test_str) ... ok
+test_add (__main__.TestAnimal.test_add) ... FAIL
+test_calcul_meilleur_animal (__main__.TestAnimal.test_calcul_meilleur_animal) ... ok
+test_crier_abstraite (__main__.TestAnimal.test_crier_abstraite) ... ok
+test_iadd (__main__.TestAnimal.test_iadd) ... ok
+test_iadd_chaussures (__main__.TestAnimal.test_iadd_chaussures) ... ok
+test_score_viral_animal (__main__.TestAnimal.test_score_viral_animal) ... FAIL
+test_attributs_compte (__main__.TestCompteTikTok.test_attributs_compte) ... ok
+test_constructeur_compte (__main__.TestCompteTikTok.test_constructeur_compte) ... ok
+test_iadd_compte (__main__.TestCompteTikTok.test_iadd_compte) ... ok
+test_len_compte (__main__.TestCompteTikTok.test_len_compte) ... ok
+test_tiktoks_plus_populaires (__main__.TestCompteTikTok.test_tiktoks_plus_populaires) ... ok
+test_vues_compte (__main__.TestCompteTikTok.test_vues_compte) ... ok
+test_score_viral_abstraite (__main__.TestElementViral.test_score_viral_abstraite) ... ok
+test_attributs_filtre (__main__.TestFiltre.test_attributs_filtre) ... ok
+test_score_viral_filtre (__main__.TestFiltre.test_score_viral_filtre) ... ok
+test_main (__main__.TestMain.test_main) ... FAIL
+test_attributs_chat (__main__.TestMammifere.test_attributs_chat) ... ok
+test_constructeur_chat (__main__.TestMammifere.test_constructeur_chat) ... ok
+test_crier_chat (__main__.TestMammifere.test_crier_chat) ... ok
+test_str_mammifere (__main__.TestMammifere.test_str_mammifere) ... ok
+test_attributs (__main__.TestMusique.test_attributs) ... ok
+test_score_viral (__main__.TestMusique.test_score_viral) ... ok
+test_attributs_cockatiel (__main__.TestOiseau.test_attributs_cockatiel) ... ok
+test_constructeur_cockatiel (__main__.TestOiseau.test_constructeur_cockatiel) ... ok
+test_crier_oiseau_chant (__main__.TestOiseau.test_crier_oiseau_chant) ... ok
+test_crier_oiseau_sans_chant (__main__.TestOiseau.test_crier_oiseau_sans_chant) ... ok
+test_str_chant (__main__.TestOiseau.test_str_chant) ... ok
+test_str_sans_chant (__main__.TestOiseau.test_str_sans_chant) ... ok
+test_attributs_serpent (__main__.TestReptile.test_attributs_serpent) ... ok
+test_constructeur_serpent (__main__.TestReptile.test_constructeur_serpent) ... ok
+test_crier_serpent (__main__.TestReptile.test_crier_serpent) ... ok
+test_str_diurne (__main__.TestReptile.test_str_diurne) ... ok
+test_str_nocturne (__main__.TestReptile.test_str_nocturne) ... ok
+test_str_serpent_non_venimeux (__main__.TestReptile.test_str_serpent_non_venimeux) ... ok
+test_str_serpent_venimeux (__main__.TestReptile.test_str_serpent_venimeux) ... ok
+test_ajouter_animal (__main__.TestTikTok.test_ajouter_animal) ... ok
+test_attributs_tiktok (__main__.TestTikTok.test_attributs_tiktok) ... ok
+test_constructeur_tiktok (__main__.TestTikTok.test_constructeur_tiktok) ... ok
+test_lt (__main__.TestTikTok.test_lt) ... ok
+test_str_tiktok (__main__.TestTikTok.test_str_tiktok) ... ok
+test_vues_tiktok (__main__.TestTikTok.test_vues_tiktok) ... ok
+
+======================================================================
+FAIL: test_score_viral_bijou (__main__.TestAccessoire.test_score_viral_bijou)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 83, in test_score_viral_bijou
+    self.assertAlmostEqual(accessoire.score_viral(), 320000)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 600000 != 320000 within 7 places (280000 difference)
+
+======================================================================
+FAIL: test_score_viral_chaussures (__main__.TestAccessoire.test_score_viral_chaussures)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 79, in test_score_viral_chaussures
+    self.assertAlmostEqual(accessoire.score_viral(), 144000)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 180000 != 144000 within 7 places (36000 difference)
+
+======================================================================
+FAIL: test_score_viral_vetement (__main__.TestAccessoire.test_score_viral_vetement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 87, in test_score_viral_vetement
+    self.assertAlmostEqual(accessoire.score_viral(), 400000)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 600000 != 400000 within 7 places (200000 difference)
+
+======================================================================
+FAIL: test_add (__main__.TestAnimal.test_add)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 99, in test_add
+    self.assertEqual(addition, 400000, msg="La valeur de l'addition est erronée.")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 600000 != 400000 : La valeur de l'addition est erronée.
+
+======================================================================
+FAIL: test_score_viral_animal (__main__.TestAnimal.test_score_viral_animal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 131, in test_score_viral_animal
+    self.assertAlmostEqual(terreur.score_viral(), 1150000, msg="La valeur du score viral est erronée.")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1350000 != 1150000 within 7 places (200000 difference) : La valeur du score viral est erronée.
+
+======================================================================
+FAIL: test_main (__main__.TestMain.test_main)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Sun Sun\Documents\Zcde\17\TP\TP5_version1\TP5_version1\test_assignment.py", line 396, in test_main
+    self.assertAlmostEqual(compte_tiktok.vues, 474175, msg="Le nombre de vues n'est pas celui attendu.")
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 198175 != 474175 within 7 places (276000 difference) : Le nombre de vues n'est pas celui attendu.
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.047s
+
+FAILED (failures=6)
