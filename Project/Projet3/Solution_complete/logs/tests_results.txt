@@ -1,8 +1,8 @@
-test_comparer_fusee (__main__.TestAssemblage.test_comparer_fusee) ... FAIL
-test_corps_celestes_accessibles (__main__.TestAssemblage.test_corps_celestes_accessibles) ... FAIL
-test_creer_capsules (__main__.TestAssemblage.test_creer_capsules) ... FAIL
-test_creer_moteurs (__main__.TestAssemblage.test_creer_moteurs) ... FAIL
-test_creer_reservoirs (__main__.TestAssemblage.test_creer_reservoirs) ... FAIL
+test_comparer_fusee (__main__.TestAssemblage.test_comparer_fusee) ... ok
+test_corps_celestes_accessibles (__main__.TestAssemblage.test_corps_celestes_accessibles) ... ok
+test_creer_capsules (__main__.TestAssemblage.test_creer_capsules) ... ok
+test_creer_moteurs (__main__.TestAssemblage.test_creer_moteurs) ... ok
+test_creer_reservoirs (__main__.TestAssemblage.test_creer_reservoirs) ... ok
 test_charger_capsules_df (__main__.TestFichiersPieces.test_charger_capsules_df) ... ok
 test_charger_moteurs_df_1 (__main__.TestFichiersPieces.test_charger_moteurs_df_1) ... ok
 test_charger_moteurs_df_2 (__main__.TestFichiersPieces.test_charger_moteurs_df_2) ... ok
@@ -16,67 +16,9 @@ test_fusee_prix (__main__.TestFusee.test_fusee_prix) ... ok
 test_fusee_str (__main__.TestFusee.test_fusee_str) ... ok
 test_reservoir_masse_rempli (__main__.TestFusee.test_reservoir_masse_rempli) ... ok
 test_fusee_constructeur_existe (__main__.TestFuseeConstructeur.test_fusee_constructeur_existe) ... ok
-test_main (__main__.TestMain.test_main) ... ERROR
-
-======================================================================
-ERROR: test_main (__main__.TestMain.test_main)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
-    return func(*newargs, **newkeywargs)
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 248, in test_main
-    self.assertIsInstance(fusees[0], Fusee)
-                          ~~~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
-
-======================================================================
-FAIL: test_comparer_fusee (__main__.TestAssemblage.test_comparer_fusee)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 234, in test_comparer_fusee
-    plt.show.assert_called()
-    ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Python313\Lib\unittest\mock.py", line 946, in assert_called
-    raise AssertionError(msg)
-AssertionError: Expected 'mock' to have been called.
-
-======================================================================
-FAIL: test_corps_celestes_accessibles (__main__.TestAssemblage.test_corps_celestes_accessibles)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 219, in test_corps_celestes_accessibles
-    self.assertEqual(corps_accessibles, corps_attendus)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None != ['Vénus', 'Mars']
-
-======================================================================
-FAIL: test_creer_capsules (__main__.TestAssemblage.test_creer_capsules)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 164, in test_creer_capsules
-    self.assertIsInstance(capsules, list, "creer_capsules doit retourner une liste")
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None is not an instance of <class 'list'> : creer_capsules doit retourner une liste
-
-======================================================================
-FAIL: test_creer_moteurs (__main__.TestAssemblage.test_creer_moteurs)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 181, in test_creer_moteurs
-    self.assertIsInstance(moteurs, list, "creer_moteurs doit retourner une liste")
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None is not an instance of <class 'list'> : creer_moteurs doit retourner une liste
-
-======================================================================
-FAIL: test_creer_reservoirs (__main__.TestAssemblage.test_creer_reservoirs)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\Sun Sun\Documents\Zcde\17\projets\projet3_vide_version1\projet3_vide\test_assignment.py", line 198, in test_creer_reservoirs
-    self.assertIsInstance(reservoirs, list, "creer_reservoirs doit retourner une liste")
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None is not an instance of <class 'list'> : creer_reservoirs doit retourner une liste
+test_main (__main__.TestMain.test_main) ... ok
 
 ----------------------------------------------------------------------
-Ran 19 tests in 0.086s
+Ran 19 tests in 0.925s
 
-FAILED (failures=5, errors=1)
+OK

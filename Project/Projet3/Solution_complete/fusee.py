@@ -13,11 +13,10 @@ class Piece:
 
     def __str__(self) -> str:
         return (
-            f"{self.__class__.__name__}:\n"
-            f"\tnom: {self.nom}\n"
-            f"\thauteur: {self.hauteur}\n"
-            f"\tmasse: {self.masse}\n"
-            f"\tprix: {self.prix}\n"
+            f"{self.__class__.__name__}: {self.nom}, "
+            f"hauteur={self.hauteur}m, "
+            f"masse={self.masse}kg, "
+            f"prix={self.prix}$"
         )
 
 
@@ -27,7 +26,7 @@ class Capsule(Piece):
         self.places = places
 
     def __str__(self) -> str:
-        return super().__str__() + f"\tplaces: {self.places}\n"
+        return super().__str__() + f", places={self.places} personne(s)"
 
 
 class Reservoir(Piece):
@@ -36,7 +35,16 @@ class Reservoir(Piece):
         self.capacite = capacite
 
     def __str__(self) -> str:
-        return super().__str__() + f"\tcapacite : {self.capacite}\n"
+        # On demande que le mot "Réservoir" possède un accent dans l'affichage. Pour cette raison, on ne va
+        # pas utiliser l'affichage de la classe pièce (appel de fonction), qui utilise le nom de la classe 
+        # comme nom d'affichage.
+        return (
+            f"Réservoir: {self.nom}, "
+            f"hauteur={self.hauteur}m, "
+            f"masse={self.masse}kg, "
+            f"prix={self.prix}$, "
+            f"capacité={self.capacite}L"
+        )
 
     @property
     def masse_rempli(self) -> float:
@@ -52,7 +60,7 @@ class Moteur(Piece):
         self.impulsion_specifique = impulsion_specifique
 
     def __str__(self) -> str:
-       return super().__str__() + f"impulsion_specifique: {self.impulsion_specifique}\n"
+       return super().__str__() + f", impulsion spécifique={self.impulsion_specifique}s"
 
 
 class Fusee:
@@ -73,16 +81,10 @@ class Fusee:
             f'\tHauteur totale: {self.hauteur}m\n'
             f'\tMasse totale (remplie): {self.masse}kg\n'
             f'\tPrix total: {self.prix}$\n'
-            f'Pièces:\n'
-            f'\tCapsule: {self.__capsule.nom}, hauteur={self.__capsule.hauteur}m, '
-            f'masse={self.__capsule.masse}kg, prix={self.__capsule.prix}$, '
-            f'places={self.__capsule.places} personne(s)\n'
-            f'\tRéservoir: {self.__reservoir.nom}, hauteur={self.__reservoir.hauteur}m, '
-            f'masse={self.__reservoir.masse}kg, prix={self.__reservoir.prix}$, '
-            f'capacité={self.__reservoir.capacite}L\n'
-            f'\tMoteur: {self.__moteur.nom}, hauteur={self.__moteur.hauteur}m, '
-            f'masse={self.__moteur.masse}kg, prix={self.__moteur.prix}$, '
-            f'impulsion spécifique={self.__moteur.impulsion_specifique}s'
+            f'Pièces:\n' +
+            '\t' + self.__capsule.__str__() +'\n' +
+            '\t' + self.__reservoir.__str__() +'\n' +
+            '\t' + self.__moteur.__str__()
         )
 
     @property
@@ -117,14 +119,12 @@ if __name__ == '__main__':
     masse_rempli = reservoir.masse_rempli
     print(f"Une fois rempli, {reservoir.nom} a une masse de {masse_rempli} kg")
     print()
-    print(reservoir)
 
     # Fusee constructeur
     capsule = Capsule("Exigüe", 1.0, 750, 1300.0, 1)
     reservoir = Reservoir("Pichet", 0.4, 0.5, 20.0, 2)
     moteur = Moteur("Pantera Arctic Cat Triple 800", 4, 2000, 14000.0, 199)
     fusee = Fusee("Romano Fafard", capsule, reservoir, moteur)
-    print(capsule)
 
     # Fusee.masse
     print(f"La masse de la fusée {fusee.nom} est {fusee.masse}kg")
