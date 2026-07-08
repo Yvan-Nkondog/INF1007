@@ -35,13 +35,13 @@ def main() -> CompteTikTok:
     chaussures = Accessoire("Chaussures", 6, TypeAccessoire.CHAUSSURES)
 
     # TODO : Ajouter (+=) les chaussures à Wako
-    # chat_wako.liste_accessoires += chaussures
-
-    # TODO : Ajouter (+=) les chaussures à Bob
-    # bob.liste_accessoires += chaussures
+    chat_wako += chaussures
+    
+    # # TODO : Ajouter (+=) les chaussures à Bob
+    bob += chaussures
 
     # TODO : Ajouter (+=) le chapeau à Bob
-    # bob.liste_accessoires += chapeau
+    bob += chapeau
 
     # TODO: Dans une boucle, faites crier les animaux
     liste_animaux = []
@@ -66,6 +66,7 @@ def main() -> CompteTikTok:
     tiktok_1 = TikTok("Wako est prêt pour Noël")
     tiktok_1.musique = MUSIQUE_CHRISTMAS
     tiktok_1.filtre = FILTRE_RALENTI
+    tiktok_1.ajouter_animal(chat_wako)
     
     # TODO: Créer un deuxième TikTok avec Bob et ajoutez le au compte
     #  Titre: "Bob porte un chapeau"
@@ -75,6 +76,7 @@ def main() -> CompteTikTok:
     tiktok_2 = TikTok("Bob porte un chapeau")
     tiktok_2.musique = MUSIQUE_BEZOS_I
     tiktok_2.filtre = FILTRE_ETOILES
+    tiktok_2.ajouter_animal(bob)
 
     # TODO: Créer un troisième TikTok avec Wako et Cookie et ajoutez le au compte
     #  Titre: "Cookie chante à Wako qui ne veut rien savoir"
@@ -84,6 +86,8 @@ def main() -> CompteTikTok:
     tiktok_3 = TikTok("Cookie chante à Wako qui ne veut rien savoir")
     tiktok_3.musique = MUSIQUE_SEPTEMBER
     tiktok_3.filtre = FILTRE_FESTIF
+    tiktok_3.ajouter_animal(chat_wako)
+    tiktok_3.ajouter_animal(cookie)
     
     # TODO Affichez le nombre de vues du troisième TikTok
     print(tiktok_3.vues)

@@ -12,7 +12,7 @@ class Animal(ElementViral, ABC):
     def __init__(self, nom: str, nb_pattes: int) -> None:
         self.nom = nom
         self.nb_pattes = nb_pattes
-        self.liste_accessoires: List[Accessoire] = []
+        self.liste_accessoires = []
 
 
     def __add__(self, accessoire: Accessoire) -> int:
@@ -23,13 +23,14 @@ class Animal(ElementViral, ABC):
     def __iadd__(self, accessoire: Accessoire) -> 'Animal':
         # TODO Ajoutez l'accessoire à la liste de l'animal. Retournez l'animal en question
         #  Attention! Un animal n'ayant aucune patte ne peut enfiler des chaussures
-        message_si_sans_pattes = f"Désolé, un animal de type {self.__class__.__name__} n'a "
-        f"pas de pattes et ne peux donc pas porter de chaussures."
-        if self.nb_pattes == 0:
+        message_si_sans_pattes = (f"Désolé, un animal de type {self.__class__.__name__} n'a " +
+        f"pas de pattes et ne peux donc pas porter de chaussures.")
+        if (self.nb_pattes == 0) and (accessoire.type_accessoire == TypeAccessoire.CHAUSSURES):
             print(message_si_sans_pattes)
             return self
         self.liste_accessoires.append(accessoire)
         return self
+
 
     @abstractmethod
     def crier(self) -> str:
@@ -39,8 +40,6 @@ class Animal(ElementViral, ABC):
 
     def score_viral(self) -> int:
         # TODO Retournez la somme du score viral des accessoires présents dans la liste d'accessoires de l'animal
-        for accessoire in self.liste_accessoires:
-            print(accessoire.score_viral())
         return sum([accessoire.score_viral() for accessoire in self.liste_accessoires])
 
 

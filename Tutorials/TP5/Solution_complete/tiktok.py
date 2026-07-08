@@ -12,7 +12,7 @@ class TikTok:
         self.titre = titre
         self.__musique = None
         self.__filtre = None
-        self.__animaux: List[Animal] = []
+        self.__animaux = []
 
 
     @property
@@ -66,7 +66,8 @@ class TikTok:
     def vues(self) -> int:
         # TODO Retournez le nombre de vues de votre TikTok selon la formule suivante:
         #  vues = SCORE_MUSIQUE + SCORE_FILTRE + NOMBRE_ANIMAUX* SOMME(SCORE_ANIMAUX)
-        somme_score_animaux = sum([animal.score_viral() for animal in self.animaux])
+        somme_score_animaux = sum([animal.score_viral() for animal in self.__animaux])
+
         return int(
             self.musique.score_viral() + 
             self.filtre.score_viral() + 
@@ -101,7 +102,7 @@ class CompteTikTok:
     # TODO Implantez mon constructeur
     def __init__(self, identifiant: str) -> None:
         self.identifiant = identifiant
-        self.__tiktoks: List[TikTok] = []
+        self.__tiktoks = []
 
 
     @property

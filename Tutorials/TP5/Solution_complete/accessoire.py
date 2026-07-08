@@ -55,47 +55,20 @@ class Accessoire(ElementViral):
         return f"<{self.__str__()}>"
 
 
-    # Fonction ajoutée pour permettre de sélectionner le multiplicateur.
-    def generer_multiplicateur(self, multiplicateur: TypeAccessoire) -> float:
-        match multiplicateur:
-            case TypeAccessoire.CHAPEAU:
-                return 1.5
-            case TypeAccessoire.CHAUSSURES:
-                return 1.2
-            case TypeAccessoire.BIJOU:
-                return 0.8
-            case TypeAccessoire.VETEMENT:
-                return 1
-            case _: 
-                return -1
-
-
     def score_viral(self) -> int:
         # TODO Retourne 10 000 fois le niveau de mignonnerie multiplié par un facteur donné
         # CHAPEAU	1.5, CHAUSSURES	1.2, BIJOU	0.8, VETEMENTS	1
         produit_partiel = self.niveau_mignonnerie * 10_000
-        for accessoire in TypeAccessoire:
-            print(10)
-            print(accessoire.name, type(accessoire.name))
-            if accessoire.name == str(TypeAccessoire.CHAPEAU):
-                return int(produit_partiel * accessoire.tranforme_en_facteur())
-            elif accessoire.name == str(TypeAccessoire.CHAUSSURES):
-                return int(produit_partiel * accessoire.tranforme_en_facteur())
-            elif accessoire.name == str(TypeAccessoire.BIJOU):
-                return int(produit_partiel * accessoire.tranforme_en_facteur())
-            elif accessoire.name == str(TypeAccessoire.VETEMENT):
-                return int(produit_partiel * accessoire.tranforme_en_facteur())
-            else:
-                print("Désolé, nom de l'accessoire sélectionné ne figure pas dans la liste des accessoires.")
+        match(self.type_accessoire):
+            case TypeAccessoire.CHAPEAU:
+                return int(produit_partiel * self.type_accessoire.tranforme_en_facteur())
+            case TypeAccessoire.CHAUSSURES:
+                return int(produit_partiel * self.type_accessoire.tranforme_en_facteur())
+            case TypeAccessoire.BIJOU:
+                return int(produit_partiel * self.type_accessoire.tranforme_en_facteur())
+            case TypeAccessoire.VETEMENT:
+                return int(produit_partiel * self.type_accessoire.tranforme_en_facteur())
+            case _:
+                print("Désolé, nom de l'accessoire sélectionné ne " \
+                "figure pas dans la liste des accessoires.")
                 return 0
-
-
-# Partie ajoutée afin de tester les fonctions / classes de façon locale.
-if __name__ == "__main__":
-    typeAccessoire = TypeAccessoire(0)
-    print(typeAccessoire.tranforme_en_facteur())
-    print(typeAccessoire, type(typeAccessoire))
-    accessoire = Accessoire("Accessoire_test", 5, TypeAccessoire.BIJOU)
-    print(accessoire)    # Attendu : type : BIJOU, nom : Accessoire_test, niveau de mignonnerie : 5
-    print(accessoire.score_viral())      # Attendu : 40 000
-    print(accessoire.type_accessoire)    # Attendu : BIJOU

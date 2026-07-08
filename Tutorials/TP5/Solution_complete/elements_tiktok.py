@@ -39,22 +39,6 @@ class Filtre(ElementViral):
         return int(self.nb_utilisations / 50_000)
 
 
-# Fonctions ajoutées afin de tester les classes de façon locales.
-if __name__ == "__main__":
-    musique = Musique("Musique test", 1000)
-    print(musique.titre)
-    print(musique.nb_ecoutes)
-    print(musique.score_viral())
-
-    filtre = Filtre("Filtre test", 500)
-    print(filtre.nom)
-    print(filtre.nb_utilisations)
-    print(filtre.score_viral())
-
-# Fin de la partie ajoutée
-# ----------------------------------------------------------------------------
-
-
 FILTRE_RALENTI = Filtre("Ralenti", 50000000)
 FILTRE_ETOILES = Filtre("Étoiles", 500000)
 FILTRE_FESTIF = Filtre("Festif", 1000000)
